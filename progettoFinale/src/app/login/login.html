@@ -1,1 +1,42 @@
-<p>login works!</p>
+<div class="sfondo">
+    <div class="contenitore">
+        <div class="dati">
+
+            <div class="titolo">
+                <p>Login</p>
+            </div>
+            <div class="email">
+                <div class="casellina">
+                    <span><i class="fa-solid fa-user"></i></span>
+                    <input class="usernameI" type="email" placeholder="Email"[(ngModel)]="email" required>
+                </div>
+            </div>
+            <div class="password">
+                <div class="casellina2">
+                    <span><i class="fa-solid fa-lock"></i></span>
+                    <input class="passwordI" type="text" placeholder="Password" [(ngModel)]="password">
+                    <span><i class="pi pi-eye"></i></span> 
+                    <!-- pi-eye-slash -->
+                </div>
+            </div>
+        </div>
+        
+            <div class="ricordami">
+                <input class="check" type="checkbox">
+                <span>Remember me</span>
+            </div>
+            <!-- <div class="p-field-checkbox">
+                <label for="remember">Ricordami</label>
+                <p-checkbox inputId="remember" name="remember" [(ngModel)]="rememberMe"></p-checkbox>
+            </div> -->
+        <div class="tasti">
+
+            <div class="login">
+                <button class="loginB" (click)="login()">Login</button>
+            </div>
+            <div class="dimenticato">
+                <a href="" class="dimenticatoA">Forgot password?</a>
+            </div>
+        </div>
+    </div>
+</div>

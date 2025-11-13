@@ -1,0 +1,111 @@
+.sfondo{
+   background-color: #f7f7f7;
+ position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;  /* 100% della larghezza viewport */
+  height: 100vh; /* 100% dell’altezza viewport */
+  display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contenitore{
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 8px 16px lightgray;
+    width: 240px;
+    height: 320px;
+    border-radius: 8px;
+}
+.dati{
+        display: flex;
+
+    flex-direction: column;
+    align-items: center;
+}
+.titolo{
+    margin: 20px;
+    font-size: xx-large;
+    font-weight: 500;
+}
+.email{
+    border: 1px solid gray;
+    width: 200px;
+    margin: 10px;
+        margin-top: 0px;
+    border-radius: 6px;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.email span{
+    padding: 5px;
+
+
+}
+.usernameI{
+    width: 164px;
+        border: none;
+        background-color: transparent;
+}
+.password{
+    border: 1px solid gray;
+    width: 200px;
+    border-radius: 6px;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.password span{
+    padding: 5px;
+}
+.passwordI{
+    background-color: transparent;
+    width: 134px;
+        border: none;
+}
+
+.p-field-checkbox{    
+    width: 100%;
+    display: flex;
+    padding: 12px;
+    padding-left: 25px;
+
+}
+.check{
+    border: 1px solid gray;
+    border-radius: 1px;
+}
+.p-field-checkbox span{
+        margin-left: 10px;
+}
+
+.tasti{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.loginB{
+    background-color: rgb(33, 33, 170);
+    color: white;
+    width: 200px;
+    height: 34px;
+    border: transparent;
+    border-radius: 6px;
+}
+
+.dimenticato{
+        margin-top: 10px;
+}
+.dimenticatoA{
+    text-decoration: none;
+    color: black
+
+}
