@@ -5,8 +5,7 @@ import { routes } from './app.routes';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { providePrimeNG } from 'primeng/config';
-import Nora from '@primeuix/themes/nora';
-import { provideAnimations } from '@angular/platform-browser/animations';
+import Aura from '@primeuix/themes/aura';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export const appConfig: ApplicationConfig = {
@@ -18,7 +17,13 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
         providePrimeNG({
             theme: {
-                preset: Aura
+                preset: Aura,
+                options: {
+                    prefix: 'p',
+                    darkModeSelector: 'system',
+                    cssLayer: false
+                }
             }
         })
+  ]
 };

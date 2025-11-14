@@ -1,0 +1,115 @@
+.sfondo{
+    background-color: #35003d; /* dark mode */
+    color: #ffffff;            /* testo chiaro */
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    
+}
+.logo{
+    padding-left: 20px;
+}
+.animazione{
+    width: 120px;
+
+
+}
+.accesso{
+padding-right: 20px;
+}
+.registrati, .accedi{
+
+}
+.registrati{
+    padding-left: 20px;
+}
+
+.centro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenuto{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.sinistra{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border: 1px solid #121212;
+    padding-left: 20px;
+}
+.punchline{
+    display: flex;
+    flex-direction: column;
+        align-items: center;
+        text-align: center;
+}
+.descrizione{
+    font-size: x-large;
+}
+.sottotitolo{
+font-size: large;
+}
+.bot{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.immagineBot img  {
+    width: 200px;
+    
+}
+.messaggioBot img{
+    width: 200px;
+    padding-bottom: 100px;
+}
+.destra{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border: 1px solid #121212;
+    padding-right: 20px;
+}
+.esempiPost{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.postSinistro{
+}
+.banner{
+    width: 375px;
+    height: 54px;
+        border: 1px solid black;
+}
+.fotoProfilo{
+}
+.nomeERuolo{
+}
+.nome{
+}
+.ruolo{   
+}
+.fotoPost{
+    width: 375px;
+    height: 375px;
+        border: 1px solid black;
+}
+.funzioni{
+    width: 375px;
+    height: 36px;
+        border: 1px solid black;
+}
+.testi{
+    width: 375px;
+    height: 189px;
+    border: 1px solid black;
+}

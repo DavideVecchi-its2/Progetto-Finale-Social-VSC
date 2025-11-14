@@ -1,11 +1,28 @@
 import { Component } from '@angular/core';
+import { Button } from "primeng/button";
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [Button],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
 export class Home {
 
+gifUrl = 'assets/img/PetsBook.gif';
+staticUrl = 'assets/img/fermo.png'; // immagine finale o statica
+gifVisible = false;
+timeoutId: any;
+
+startGif() {
+  this.gifVisible = true;
+
+  // reset per non far partire più timer in parallelo
+  clearTimeout(this.timeoutId);
+
+  // dopo 5 secondi "fermi" la GIF
+  this.timeoutId = setTimeout(() => {
+    this.gifVisible = false;
+  }, 2500);
+}
 }

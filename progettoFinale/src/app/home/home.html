@@ -1,41 +1,104 @@
 <div class="sfondo">
     <div class="header">
         <div class="logo">
-            <img src="assets/img/Gatto.png" alt="logo" class="logo">
+            <img class="animazione" [src]="gifVisible ? gifUrl : staticUrl" (mouseenter)="startGif()" alt="logo">
         </div>
         <div class="accesso">
-            <button class="accedi">accedi</button>
-            <button class="registrati">regestrati</button>
+            <p-button class="accedi" label="Accedi" severity="help" ></p-button>
+            <p-button class="registrati" label="Registrati" severity="help" ></p-button>
         </div>
     </div>
     <div class="centro">
-
         <div class="contenuto">
             <div class="sinistra">
                 <div class="punchline">
                     <div class="descrizione">
-
+                        <h1>Crea il profilo<br>Perfetto del tuo<br>amico a 4 zampe</h1>
                     </div>
                     <div class="sottotitolo">
-
+                        <span>Inserisci le foto più belle, cerca amici amanti degli animali come te e tante altre funzionalità</span>
                     </div>
                 </div>
                 <div class="bot">
                     <div class="immagineBot">
-
+                        <img src="assets/img/baltobot.png" alt="baltoBot">
                     </div>
                     <div class="messaggioBot">
-
+                        <img src="assets/img/messaggio.png" alt="messaggio">
                     </div>
                 </div>
             </div>
             <div class="destra">
                 <div class="esempiPost">
                     <div class="postSinistro">
+                        <div class="banner">
+                            <div class="fotoProfilo">
 
+                            </div>
+                            <div class="nomeERuolo">
+                                <div class="nome">
+    
+                                </div>
+                                <div class="ruolo">
+    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fotoPost">
+
+                        </div>
+                        <div class="funzioni">
+
+                        </div>
+                        <div class="testi">
+                            <div class="like">
+
+                            </div>
+                            <div class="nomeEContenuto">
+
+                            </div>
+                            <div class="mostraCommenti">
+
+                            </div>
+                            <div class="aggiungiCommento">
+
+                            </div>
+                        </div>
                     </div>
                     <div class="postDestro">
+                        <div class="banner">
+                            <div class="fotoProfilo">
 
+                            </div>
+                            <div class="nomeERuolo">
+                                <div class="nome">
+    
+                                </div>
+                                <div class="ruolo">
+    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fotoPost">
+
+                        </div>
+                        <div class="funzioni">
+
+                        </div>
+                        <div class="testi">
+                            <div class="like">
+
+                            </div>
+                            <div class="nomeEContenuto">
+
+                            </div>
+                            <div class="mostraCommenti">
+
+                            </div>
+                            <div class="aggiungiCommento">
+
+                            </div>
+                        </div>
                     </div>
                 </div>
 
