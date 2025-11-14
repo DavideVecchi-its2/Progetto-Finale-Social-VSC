@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Button } from "primeng/button";
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-home',
-  imports: [Button],
+  imports: [Button, ButtonModule],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
