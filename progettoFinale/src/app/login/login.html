@@ -1,1 +1,28 @@
-<p>login works!</p>
+<div class="sfondo">
+    <div class="centro">
+        <div class="sinistra">  
+            <div class="logo">
+                <img class="animazione" [src]="gifVisible ? gifUrl : staticUrl" (mouseenter)="startGif()" alt="logo">
+            </div>
+        </div>
+        <div class="destra">
+            
+            <div class="contenitore">
+                <div class="email">
+                    <div class="casellina">
+                        <span><i class="fa-solid fa-user"></i></span>
+                        <input class="usernameI" type="email" placeholder="Email"[(ngModel)]="email" required>
+                    </div>
+                </div>
+                <div class="password">
+                    <div class="casellina2">
+                        <span><i class="fa-solid fa-lock"></i></span>
+                        <input class="passwordI" type="text" placeholder="Password" [(ngModel)]="password">
+                        <span><i class="pi pi-eye"></i></span> 
+                        <!-- pi-eye-slash -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
