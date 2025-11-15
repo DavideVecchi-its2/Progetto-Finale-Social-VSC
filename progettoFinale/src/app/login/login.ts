@@ -18,8 +18,24 @@ export class Login {
   password!: string;
  loading: any;
  submitted: boolean = false;
+ gifUrl = 'assets/img/PetsBook.gif';
+staticUrl = 'assets/img/fermo.png'; // immagine finale o statica
+gifVisible = false;
+timeoutId: any;
 
   // rememberMe: boolean = false;
+
+startGif() {
+  this.gifVisible = true;
+
+  // reset per non far partire più timer in parallelo
+  clearTimeout(this.timeoutId);
+
+  // dopo 5 secondi "fermi" la GIF
+  this.timeoutId = setTimeout(() => {
+    this.gifVisible = false;
+  }, 2500);
+}
 
  constructor(public router:Router, private authService: AuthService){ }
 

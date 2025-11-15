@@ -1,14 +1,30 @@
 .sfondo{
-   background-color: #f7f7f7;
- position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;  /* 100% della larghezza viewport */
-  height: 100vh; /* 100% dell’altezza viewport */
-  display: flex;
-    justify-content: center;
+    background-color: #24002a; /* dark mode */
+    color: #ffffff;            /* testo chiaro */
+}
+.centro{
+    display: flex;
+    flex-direction: row;
     align-items: center;
-
+}
+.sinistra{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+padding-left: 10%;
+    
+}
+.animazione{
+    width: 40%;
+}
+.destra{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    padding-right: 10%;
+    
 }
 
 .contenitore{

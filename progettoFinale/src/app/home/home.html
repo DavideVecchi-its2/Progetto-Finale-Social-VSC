@@ -4,8 +4,8 @@
             <img class="animazione" [src]="gifVisible ? gifUrl : staticUrl" (mouseenter)="startGif()" alt="logo">
         </div>
         <div class="accesso">
-            <p-button class="accedi" label="Accedi" severity="help" ></p-button>
-            <p-button class="registrati" label="Registrati" severity="help" ></p-button>
+            <p-button class="login" label="Login" severity="help" [text]="true"  (click)="goToLogin()"></p-button>
+            <p-button class="registrati" label="Registrati" severity="help" [text]="true"  (click)="goToRegistration()" ></p-button>
         </div>
     </div>
     <div class="centro">
@@ -21,10 +21,10 @@
                 </div>
                 <div class="bot">
                     <div class="immagineBot">
-                        <img src="assets/img/baltobot.png" alt="baltoBot">
+                        <img src="assets/img/baltobot.png" (click)="goToChatBot()" alt="baltoBot">
                     </div>
                     <div class="messaggioBot">
-                        <img src="assets/img/messaggio.png" alt="messaggio">
+                        <img src="assets/img/messaggio.png" (click)="goToChatBot()" alt="messaggio">
                     </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@
                             </div>
                             <div class="nomeERuolo">
                                 <div class="nome">
-                                    <span>Davide Vecchi</span>
+                                    <span>Michele Barretta</span>
                                 </div>
                                 <div class="ruolo">
                                     <span>Admin</span>
@@ -105,7 +105,7 @@
                                 <span>Piace a x persone</span>
                             </div>
                             <div class="nomeEContenuto">
-                                <span class="nome">Davide Vecchi -</span><span> Vi presento Mew! <br><br>è una gattina europea molto vivace e simpatica, ma occhio ai morsi! ahaha  </span>
+                                <span class="nome">Michele Barretta -</span><span> Vi presento Mew! <br><br>è una gattina europea molto vivace e simpatica, ma occhio ai morsi! ahaha  </span>
                             </div>
                             <div class="mostraCommenti">
                                 <span>Mostra tutti i commenti</span>

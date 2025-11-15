@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Button } from "primeng/button";
 import { ButtonModule } from 'primeng/button';
 
@@ -14,6 +15,18 @@ gifUrl = 'assets/img/PetsBook.gif';
 staticUrl = 'assets/img/fermo.png'; // immagine finale o statica
 gifVisible = false;
 timeoutId: any;
+
+constructor(private router: Router){}
+
+goToLogin(){
+  this.router.navigate(['/login']);
+}
+goToRegistration(){
+  this.router.navigate(['/register']);
+}
+goToChatBot(){
+  this.router.navigate(['/balto']);
+}
 
 startGif() {
   this.gifVisible = true;
