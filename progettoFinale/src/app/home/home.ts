@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Button } from "primeng/button";
 import { ButtonModule } from 'primeng/button';
+import { ImageModule } from 'primeng/image';
 
 @Component({
   selector: 'app-home',
-  imports: [Button, ButtonModule],
+  imports: [Button, ButtonModule, ImageModule],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

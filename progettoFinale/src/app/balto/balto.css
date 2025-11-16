@@ -1,0 +1,98 @@
+.sfondo{
+    background-color: #24002a; /* dark mode */
+    color: #ffffff;            /* testo chiaro */
+    width: 100vw;  /* 100% della larghezza viewport */
+    height: 100vh; /* 100% dell’altezza viewport */
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+.sinistra{
+    padding-left: 20px;
+}
+.animazione{
+    width: 120px;
+}
+.accesso{
+padding-right: 20px;
+}
+.contenitore{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+.boxChat{
+    display: flex;    
+    flex-direction: column-reverse;
+    height: 70vh;
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+.chatBot {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+.balto img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+.testoBot {
+    max-width: 60%;
+    background: #e5e5ea;       
+    padding: 10px 14px;
+    border-radius: 18px;
+    border-bottom-left-radius: 5px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #000;
+}
+
+.chatUtente {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 10px;
+}
+.fotoUtente img {
+    width: 45px;
+    height: 40px;
+    border-radius: 50%;
+}
+.testoUtente {
+    max-width: 60%;
+    background: #d2f8c6;      /* Verde WhatsApp */
+    padding: 10px 14px;
+    border-radius: 18px;
+    border-bottom-right-radius: 5px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #000;
+}
+.boxDomanda{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: #86868655;
+}
+.boxTestoDomanda{
+    width: 100%;
+    padding-right: 50px;
+    padding-left: 20px;
+}
+.domanda{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    height: 30px;
+}

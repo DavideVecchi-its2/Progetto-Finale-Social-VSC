@@ -67,8 +67,9 @@
 }
 .emailI{
     width: 164px;
-        border: none;
-        background-color: transparent;
+    border: none;
+    background-color: transparent;
+    outline: none;
 }
 .password{
     border: 1px solid gray;
@@ -85,7 +86,8 @@
 .passwordI{
     background-color: transparent;
     width: 140px;
-        border: none;
+    border: none;
+    outline: none;
 }
 .ricordami{
     width: 100%;
