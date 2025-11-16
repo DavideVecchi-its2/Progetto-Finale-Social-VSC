@@ -5,11 +5,12 @@ import { lastValueFrom } from 'rxjs';
 import { ButtonModule } from 'primeng/button';
 import { AuthService } from '../service/auth-service';
 import { CheckboxModule } from 'primeng/checkbox';
+import { InputTextModule } from 'primeng/inputtext';
 
 
 @Component({
   selector: 'app-login',
-  imports: [FormsModule, ButtonModule, CheckboxModule],
+  imports: [FormsModule, ButtonModule, CheckboxModule, InputTextModule],
   templateUrl: './login.html',
   styleUrl: './login.css'
 })
