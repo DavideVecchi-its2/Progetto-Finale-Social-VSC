@@ -22,8 +22,9 @@ export class Login {
 staticUrl = 'assets/img/fermo.png'; // immagine finale o statica
 gifVisible = false;
 timeoutId: any;
+checked: any; //da usare per il ricordami
 
-  // rememberMe: boolean = false;
+
 
 startGif() {
   this.gifVisible = true;
@@ -77,11 +78,6 @@ startGif() {
   }  }catch (error) {
     
   }
-  // if (this.rememberMe) {
-  //   localStorage.setItem('savedEmail', this.email);
-  // } else {
-  //   localStorage.removeItem('savedEmail');
-  // }
   }
   
 }
