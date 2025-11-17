@@ -7,7 +7,7 @@
         </div>
         <div class="centro">
             <div class="logo">
-                <img class="animazione" [src]="gifVisible ? gifUrl : staticUrl" (mouseenter)="startGif()" alt="logo">
+                <img class="animazione" [src]="gifVisible ? gifUrl : staticUrl" (click)="goToHome()"  (mouseenter)="startGif()" alt="logo">
             </div>
         </div>
         <div class="destra">

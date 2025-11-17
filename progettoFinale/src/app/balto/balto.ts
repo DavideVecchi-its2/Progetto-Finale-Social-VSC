@@ -11,6 +11,11 @@ import { InputTextModule } from 'primeng/inputtext';
 })
 export class Balto {
 
+  
+goToHome(){
+  this.router.navigate(['/home']);
+}
+
 gifUrl = 'assets/img/PetsBook.gif';
 staticUrl = 'assets/img/fermo.png'; // immagine finale o statica
 gifVisible = false;
