@@ -15,6 +15,13 @@ import { InputTextModule } from 'primeng/inputtext';
   styleUrl: './login.css'
 })
 export class Login {
+goToRegistration(){
+  this.router.navigate(['/register']);
+}
+
+goToHome(){
+  this.router.navigate(['/home']);
+}
   email!: string;
   password!: string;
  loading: any;

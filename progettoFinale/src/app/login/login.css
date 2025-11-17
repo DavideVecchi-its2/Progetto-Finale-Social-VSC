@@ -1,6 +1,10 @@
 .sfondo{
     background-color: #24002a; 
     color: #ffffff;            
+    background-image:  url('/assets/img/background.png');
+    background-size: cover;       /* adatta allo schermo */
+    background-position: center;  /* centrato */
+    background-repeat: no-repeat; /* evita ripetizioni */
     width: 100vw;  /* 100% della larghezza viewport */
   height: 100vh; /* 100% dell’altezza viewport */
   
@@ -33,8 +37,10 @@
     flex-direction: column;
     align-items: center;
     box-shadow: 0px 0px 16px rgba(211, 211, 211, 0.744);
-    width: 240px;
-    height: 320px;
+    max-width: 500px;
+    height: auto;
+    height: 400px;
+    width: 100%;
     border-radius: 8px;
 }
 .dati{
@@ -42,6 +48,9 @@
     flex-direction: column;
     align-items: center;
     margin-top: 23px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .titolo{
     margin: 20px;
@@ -51,7 +60,7 @@
 }
 .email{
     border: 1px solid gray;
-    width: 200px;
+    width: 100%;
     margin: 10px;
         margin-top: 0px;
     border-radius: 6px;
@@ -66,14 +75,14 @@
 
 }
 .emailI{
-    width: 164px;
+    width: 100%; 
     border: none;
     background-color: transparent;
     outline: none;
 }
 .password{
     border: 1px solid gray;
-    width: 200px;
+    width: 100%;
     border-radius: 6px;
     height: 35px;
     display: flex;
@@ -85,7 +94,7 @@
 }
 .passwordI{
     background-color: transparent;
-    width: 140px;
+    width: 90%;
     border: none;
     outline: none;
 }
@@ -112,14 +121,6 @@
     justify-content: flex-end;
     padding-bottom: 10px;
 }
-.loginB{
-    background-color: rgb(124, 33, 170);
-    color: white;
-    width: 200px;
-    height: 34px;
-    border: transparent;
-    border-radius: 6px;
-}
 
 .dimenticato{
         margin-top: 10px;
@@ -128,4 +129,19 @@
     text-decoration: none;
     color: rgb(255, 255, 255)
 
+}
+.register{
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+.linea{
+    width: 100%;
+}
+
+.linea hr{
+     width: 80%;
+  margin: 20px auto;
+  height: 2px;
+  background: #fff;
 }
