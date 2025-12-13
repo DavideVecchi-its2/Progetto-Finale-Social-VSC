@@ -1,0 +1,50 @@
+.sfondo{
+    background-color: #24002a; /* dark mode */
+    background-image:  url('/assets/img/background-vuoto.png');
+    background-size: cover;       /* adatta allo schermo */
+    background-position: center;  /* centrato */
+    background-repeat: no-repeat; /* evita ripetizioni */
+    color: #ffffff;            /* testo chiaro */
+    min-height: 100vh;
+    display: flex;
+  flex-direction: column;
+
+}
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;  
+    background-color: rgba(205, 204, 204, 0.164);
+}
+.navbar {
+  position: sticky;
+  top: 90px;       
+  align-self: flex-start;
+}
+.contenitore{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.navbar, .post, .suggeriti{
+    
+    width: 33%;
+}
+.post{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+      overflow-y: visible;
+}
+.suggeriti{
+  position: sticky;
+   align-self: flex-start;
+    top: 90px;     
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;  
+}

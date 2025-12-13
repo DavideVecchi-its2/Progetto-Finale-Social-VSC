@@ -1,0 +1,29 @@
+.box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(205, 204, 204, 0.164);
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    transition: background-color 0.2s ease;
+    gap: 10px;
+    height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  }
+.box:hover{
+  background-color: rgba(0, 0, 0, 0.08);
+  
+}
+.iconaETesto {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.testo {
+  font-size: 15px;
+}

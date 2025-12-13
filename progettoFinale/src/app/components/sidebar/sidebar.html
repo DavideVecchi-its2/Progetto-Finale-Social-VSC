@@ -1,0 +1,24 @@
+<div class="contenitore">
+    <div class="elementi">
+
+    @for (item of sidebarItems; track $index) {
+        
+    <app-sidebar-item class="bottone"
+    [icon]="item.icon"
+    [label]="item.label"
+    [route]="item.route">
+    </app-sidebar-item>
+    
+}
+</div>
+<div class="esci">
+    
+    <app-sidebar-item class="bottone"
+    icon="pi pi-sign-out"
+    label="LogOut"
+    route=""
+    
+    >
+</app-sidebar-item>
+</div>
+</div>

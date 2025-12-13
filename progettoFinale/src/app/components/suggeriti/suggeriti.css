@@ -1,0 +1,35 @@
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px;
+    gap: 50px;
+    background-color: rgba(205, 204, 204, 0.164);
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 10px;
+}
+.img-circle{
+       width: 50px;
+}
+
+.immagineETesto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.nomeERuolo{
+    display: flex;
+    flex-direction: column;
+}
+.nome{
+    font-size: 1em;
+     font-weight: bold;
+     color: rgb(219, 219, 219);
+}
+.ruolo{   
+    font-size: 0.75em;
+    font-weight: bold;
+          color: #a3a3a3bc;
+}
