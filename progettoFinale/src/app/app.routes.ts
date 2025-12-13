@@ -1,9 +1,12 @@
 import { Routes } from '@angular/router';
-import { Home } from './home/home';
+import { Home } from './screen/home/home';
 import { Component } from '@angular/core';
-import { Login } from './login/login';
-import { Register } from './register/register';
-import { Balto } from './balto/balto';
+import { Login } from './screen/login/login';
+import { Register } from './screen/register/register';
+import { Balto } from './screen/balto/balto';
+import { ScreenUtente } from './screen/screen-utente/screen-utente';
+import { Header } from 'primeng/api';
+import { HeaderSocial } from './components/header-social/header-social';
 
 
 export const routes: Routes = [
@@ -11,5 +14,7 @@ export const routes: Routes = [
     {path: 'home', component: Home},
     {path: 'login', component:Login},
     {path: 'register', component:Register},
-    {path: 'balto', component:Balto}
+    {path: 'balto', component:Balto},
+    {path: 'screen', component:ScreenUtente},
+        {path: 'header', component:HeaderSocial}
 ];
