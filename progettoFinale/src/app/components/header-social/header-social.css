@@ -7,7 +7,7 @@
 
 }
 .logo{
-    padding-left: 20px;
+    padding-left: 10px;
 }
 .animazione{
     width: 120px;
@@ -23,8 +23,8 @@
 .box{
     display: flex;
     align-items: center;
-    padding: 7px;
-    gap: 5px;
+    padding: 10px;
+    gap: 10px;
     background-color: rgba(205, 204, 204, 0.164);
     cursor: pointer;
     border-radius: 8px;
@@ -38,6 +38,7 @@
 }
 .img-circle{
        width: 50px;
+    border-radius: 50px;
 }
 
 .testo{

@@ -1,7 +1,7 @@
  @for (utente of listaUtenti; track utente.id; let i = $index) {
      <div class="box">
          <div class="immagineETesto">
-             <img src="assets/img/profilo-anonimo.png" alt="profilo" class="img-circle">
+             <img src="{{utente.avatar}}" alt="profilo" class="img-circle">
              <div class="nomeERuolo">
                  <span class="nome">{{utente.nome}} {{utente.cognome}}</span>
                  <span class="ruolo">{{utente.ruolo.nome}}</span>

@@ -43,15 +43,17 @@ padding-right: 20px;
 }
 .boxChat{
     display: flex;    
-    flex-direction: column-reverse;
+    flex-direction: column;
     height: 70vh;
     overflow-y: auto;
     padding-bottom: 20px;
+  
 }
 .chatBot {
     display: flex;
     align-items: flex-start;
     gap: 10px;
+    padding-top: 20px;
 }
 span{
     font-size: 1.25em;

@@ -1,17 +1,31 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
+import { ChatMessage } from '../../model/chat-model';
+import { ChatbotService } from '../../service/chatbot-service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-balto',
-  imports: [ButtonModule, InputTextModule],
+  imports: [ButtonModule, InputTextModule, FormsModule],
   templateUrl: './balto.html',
   styleUrl: './balto.css',
 })
 export class Balto {
 
+  messaggi: ChatMessage[] = [
+    {
+      role: 'assistant',
+      content: 'Ciao! Io sono Balto, sono qui per aiutarti con qualsiasi domanda su PetsBook. Come posso aiutarti?'
+    }
+  ];
+  inputUtente = '';
+  loading = false;
+  loadingTimeout: any;
   
+  constructor(private router: Router, private botService: ChatbotService, private cdr: ChangeDetectorRef){}
+
 goToHome(){
   this.router.navigate(['/home']);
 }
@@ -34,15 +48,40 @@ startGif() {
   }, 2500);
 }
 inviaDomanda() {
-//invia la domanda al chatbot
-}
+ if (!this.inputUtente.trim()) return;
+
+    const text = this.inputUtente;
+    this.inputUtente = '';
+
+      this.messaggi = [
+    ...this.messaggi,
+    { role: 'user', content: text }
+  ];
+
+    this.loading = true;
+
+    this.loadingTimeout = setTimeout(() => {
+    this.loading = false;
+    }, 5000);
+
+    this.botService.sendMessage(text, [...this.messaggi]).subscribe({
+      next: res => {
+        this.messaggi = res.history;
+        this.loading = false;
+        this.cdr.detectChanges();   
+      },
+      error: err => {
+        console.error(err);
+        this.loading = false;
+      }
+    });
+  }
 
 
-ricomincia() {
-  //ripulisce la chat
-}
+  ricomincia() {
+    this.messaggi = this.messaggi.slice(0, 1); // lascia solo il messaggio iniziale
+  }
 
-constructor(private router: Router){}
 
 goToLogin(){
   this.router.navigate(['/login']);

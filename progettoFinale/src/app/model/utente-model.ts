@@ -18,6 +18,7 @@ export class UtenteDto{
     listaLike?:LikeDto[];
     createdAt!:string;
     updatedAt!:string;
+    avatar!:string | null | undefined;
 }
 
 export class UtenteFormDto{

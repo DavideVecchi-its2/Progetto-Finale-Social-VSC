@@ -23,7 +23,9 @@
     justify-content: center;
 }
 .img-circle {
-width: 50px;
+
+    width: 47px;
+    border-radius: 50px;
 }
 .nomeERuolo{
     color: white;

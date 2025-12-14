@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ButtonModule } from "primeng/button";
+import { UtenteDto } from '../../model/utente-model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header-social',
@@ -8,6 +10,14 @@ import { ButtonModule } from "primeng/button";
   styleUrl: './header-social.css',
 })
 export class HeaderSocial {
+
+constructor(public router:Router){}
+
+goToHome(){
+  this.router.navigate(['/home']);
+}
+
+  utente = UtenteDto;
 
 gifUrl = 'assets/img/PetsBook.gif';
 staticUrl = 'assets/img/fermo.png'; // immagine finale o statica
