@@ -15,7 +15,7 @@ export class CommentiService {
 
   constructor(private http: HttpClient){}
 
-  getAllCommenti(): Observable<PageResponse<CommentoDto>> {
+  getAllMyCommenti(): Observable<PageResponse<CommentoDto>> {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     })
@@ -25,13 +25,12 @@ export class CommentiService {
     const params = new HttpParams().set('id', id);
     return this.http.get<CommentoDto>(this.apiUrl, {params});
   }
-    getCommentiByPost(id: number): Observable<PageResponse<CommentoDto>> {
-    const body =  {id: id};
-     const headers = new HttpHeaders({
+getCommentiByPost(id: number): Observable<PageResponse<CommentoDto>> {
+      const headers = new HttpHeaders({
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     })
-    return this.http.get<PageResponse<CommentoDto>>(this.apiUrl , {headers});
-  }
+  return this.http.post<PageResponse<CommentoDto>>( this.apiUrl + '/by-post', { id }, {headers} );
+}
   deleteCommento(id: number): Observable<unknown> {
     const body =  {id: id};
     return this.http.delete<void>(this.apiUrl, {body});

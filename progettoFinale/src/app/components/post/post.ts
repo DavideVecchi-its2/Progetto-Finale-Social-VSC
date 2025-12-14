@@ -17,7 +17,7 @@ import { LikeService } from '../../service/like-service';
   styleUrl: './post.css',
 })
 export class Post {
-
+  
   listaPost: PostDto [] = [] ;
   listaCommenti: CommentoDto [] = [] ;
   listaLike: LikeDto [] = [] ;
@@ -50,9 +50,9 @@ export class Post {
   post.likeCount += post.liked ? 1 : -1;
 
   if (post.liked) {
-    this.likeService.creaLike(post.id);
+    this.likeService.creaLike(post.id).subscribe();;
   } else {
-    this.likeService.deleteLike(post.id);
+    this.likeService.deleteLike(post.id).subscribe();;
   }
   
 }

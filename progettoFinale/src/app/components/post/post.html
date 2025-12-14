@@ -77,11 +77,9 @@
         Aggiungi un commento
       </span>
     </div>
-    <div class="commenti">
-      @if (post.commentiVisibili) {
-        @for (commento of post.listaCommenti; track commento.id) {
-          <div class="commento">
-            <div class="utente">
+    @if (post.commentiVisibili) {
+      @for (commento of post.listaCommenti; track commento.id) {
+          <div class="commenti">
               <div class="fotoProfilo">
                 <img
                   [src]="commento.utente.avatar"
@@ -89,23 +87,23 @@
                   class="img-circle"
                 />
               </div>
-              <div class="nomeERuolo">
-                <span class="nome">
+              <div class="destro">
+
+                <span class="nomeC">
                   {{ commento.utente.nome }} {{ commento.utente.cognome }}
                 </span>
-                <span class="ruolo">
+                <span class="ruoloC">
                   {{ commento.utente.ruolo.nome }}
                 </span>
+                
+                <div class="contenuto">
+                  <span class="contenutoC">
+                    {{ commento.testo }}
+                  </span>
+                </div>
               </div>
             </div>
-            <div class="contenuto">
-              <p class="contenutoP">
-                {{ commento.testo }}
-              </p>
-            </div>
-          </div>
         }
       }
-    </div>
   </div>
 }
