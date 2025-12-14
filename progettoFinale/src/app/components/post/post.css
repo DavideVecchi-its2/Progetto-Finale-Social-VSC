@@ -67,6 +67,9 @@ padding-right: 10px;
 .fDestra{
     justify-content: flex-end;
 }
+.testi{
+    padding-bottom: 10px;
+}
 .like{
     font-size: 1.25em;
     padding-left: 12px;
@@ -82,6 +85,26 @@ padding-right: 10px;
     margin-bottom: 5px;
 }
 
-.mostraCommenti, .aggiungiCommento, .ruolo{
+.mostraCommenti, .aggiungiCommento, .ruolo, .ruoloC{
         color: #a3a3a3bc;
+}
+.commenti{
+    width:100%;  
+    background-color: #5d5c5d47;
+    display: flex;
+    flex-direction: row;
+
+    gap:10px;
+
+}
+.nomeC{
+    font-weight: bold;
+    font-size: 0.75em;
+
+}
+.ruoloC{
+    font-size: 0.60em;
+}
+.contenuto{
+    padding-top: 2px;
 }
