@@ -1,7 +1,7 @@
 <div class="contenitore">
     <div class="logo">
         <div class="logo">
-            <img class="animazione" [src]="gifVisible ? gifUrl : staticUrl" (mouseenter)="startGif()" alt="logo">
+            <img class="animazione" [src]="gifVisible ? gifUrl : staticUrl" (click)="goToHome()" (mouseenter)="startGif()" alt="logo">
         </div>
     </div>
     <div class="destra">
@@ -10,10 +10,10 @@
         </div>
         <div class="utente">
             <button class="box">
-                    <img src="assets/img/profilo-anonimo.png" alt="profilo" class="img-circle">
+                    <img src="assets/img/profilo-1.jpg" alt="profilo" class="img-circle">
                     <div class="testo">
                         <span class="messaggio">Bentornato!</span>
-                        <span class="nome">Michele Barretta</span>
+                        <span class="nome">Davide Vecchi</span>
                 </div>
             </button>
         </div>

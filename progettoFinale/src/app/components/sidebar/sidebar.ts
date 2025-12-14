@@ -12,9 +12,9 @@ export class Sidebar {
   sidebarItems = [
   { icon: 'pi pi-home', label: 'Home', route: '/home' },
   { icon: 'pi pi-search', label: 'Cerca Utenti', route: '/cerca-utenti' },
-  { icon: 'pi pi-search', label: 'Esplora', route: '/esplora' },
-  { icon: 'pi pi-search', label: 'Chat', route: '/chat' },
-  { icon: 'pi pi-search', label: 'Profilo', route: '/profilo' },
+  { icon: 'pi pi-compass', label: 'Esplora', route: '/esplora' },
+  { icon: 'pi pi-send', label: 'Chat', route: '/chat' },
+  { icon: 'pi pi-user', label: 'Profilo', route: '/profilo' },
 
   
 ];

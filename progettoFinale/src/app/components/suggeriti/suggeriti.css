@@ -8,16 +8,18 @@
     background-color: rgba(205, 204, 204, 0.164);
     border-radius: 8px;
     border: none;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .img-circle{
        width: 50px;
+       border-radius: 50px;
 }
 
 .immagineETesto{
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 10px;
 }
 .nomeERuolo{
     display: flex;

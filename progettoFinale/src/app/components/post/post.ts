@@ -17,7 +17,7 @@ import { LikeService } from '../../service/like-service';
   styleUrl: './post.css',
 })
 export class Post {
-  idPost: number = 0;
+
   listaPost: PostDto [] = [] ;
   listaCommenti: CommentoDto [] = [] ;
   listaLike: LikeDto [] = [] ;
@@ -26,20 +26,46 @@ export class Post {
 
      constructor(private router: Router, private postService: PostService, private commentiService: CommentiService, private likeService: LikeService){}
 
-    async mostra(id: number) {
-    if(this.idPost===id){
-      this.idPost=0;
-    }
-    else {
-      let response = await lastValueFrom(this.commentiService.getCommentiByPost(id));
+    async mostra(post: any) {
+  if (post.commentiVisibili) {
+    post.commentiVisibili = false;
+    return;
+  }
+  post.commentiVisibili = true;
+  if (!post.listaCommenti) {
+    try {
+      let response = await lastValueFrom(this.commentiService.getCommentiByPost(post.id));
       console.log(response);
-      this.listaCommenti=response.contenuto;
-      
-      this.idPost=id;
+      post.listaCommenti = response.contenuto;
+    } catch (error) {
+      console.error('Errore caricamento commenti', error);
+      post.listaCommenti = [];
+    }
       this.cdr.detectChanges();    
     }
-
   }
+
+  toggleLike(post: any) {
+  post.liked = !post.liked;
+  post.likeCount += post.liked ? 1 : -1;
+
+  if (post.liked) {
+    this.likeService.creaLike(post.id);
+  } else {
+    this.likeService.deleteLike(post.id);
+  }
+  
+}
+mapLikeState() {
+  const likedPostIds = new Set(
+    this.listaLike.map(like => like.post.id)
+  );
+
+  this.listaPost = this.listaPost.map(post => ({
+    ...post,
+    liked: likedPostIds.has(post.id),
+  }));
+}
 ngOnInit() {
   this.loadTutto();
 }
@@ -58,6 +84,8 @@ async loadTutto(){
   } catch (error) {
     
   }
+    this.mapLikeState();
+
     this.cdr.detectChanges();    
 }
 }

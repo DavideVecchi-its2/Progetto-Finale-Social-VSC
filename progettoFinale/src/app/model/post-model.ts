@@ -1,21 +1,28 @@
+import { SafeUrl } from "@angular/platform-browser";
 import { CommentoDto } from "./commento-model";
 import { LikeDto } from "./like-model";
 import { UtenteDto } from "./utente-model";
 
-export class PostDto{
-    id!:number;
-    utente!:UtenteDto;
-    dataOra!:string;
-    contenuto!:string;
-    listaCommenti?:CommentoDto[];
-    listaLike?:LikeDto[];
-    createdAt!:string;
-    updatedAt!:string;
+export interface  PostDto{
+  id: number;
+  utente: UtenteDto;
+  dataOra: string;
+  contenuto: string;
+  immagine?: string | SafeUrl;
+
+  listaCommenti?: CommentoDto[];
+
+  listaLike?:LikeDto[];
+  likeCount: number;
+  liked?: boolean;
+  commentiVisibili?: boolean;
 }
 
-export class PostFormDto{
-    id?:number;
-    utente!:UtenteDto;
-    dataOra!:string;
-    contenuto!:string;
+
+export interface PostFormDto{
+    id:number;
+    utente:UtenteDto;
+    immagine?:string | SafeUrl | undefined;
+    dataOra:string;
+    contenuto:string;
 }
