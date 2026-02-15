@@ -7,8 +7,13 @@
         </div>
         <div class="centro">
             <div class="logo">
-                <img class="animazione" [src]="gifVisible ? gifUrl : staticUrl" (click)="goToHome()"  (mouseenter)="startGif()" alt="logo">
-            </div>
+<img
+  class="animazione"
+  [src]="gifVisible() ? gifUrl : staticUrl"
+  (click)="goToHome()"
+  (mouseenter)="startGif()"
+  alt="logo"
+/>            </div>
         </div>
         <div class="destra">
             <div class="accesso">
@@ -21,7 +26,7 @@
 
         <div class="contenitore">
             <div class="boxChat">
-                @for (messaggio of messaggi; track $index) {
+                @for (messaggio of messaggi(); track $index) {
                     @if(messaggio.role === 'user'){
                         <div class="chatUtente" >
                             <div class="testoUtente">
@@ -44,7 +49,7 @@
                         </div>
                     }
                 }
-                @if(loading){
+                @if(loading()){
                     <div class="chatBot">
                         <div class="balto">
                             <img src="assets/img/baltobot.png">
@@ -57,9 +62,16 @@
             </div>
             <div class="boxDomanda">
                 <div class="boxTestoDomanda" >
-                    <input class="domanda" type="text" placeholder="Inserisci qui la tua domnanda per Balto!"  [(ngModel)]="inputUtente" (keyup.enter)="inviaDomanda()" >
+                    <input
+                    class="domanda"
+                    type="text"
+                    placeholder="Inserisci qui la tua domanda per Balto!"
+                    [ngModel]="inputUtente()"
+                    (ngModelChange)="inputUtente.set($event)"
+                    (keyup.enter)="inviaDomanda()"
+                    />                
                 </div>
-                <div class="pulsante">
+                    <div class="pulsante">
                     <p-button class="invio" icon="pi pi-send" severity="help" [text]="true"  (click)="inviaDomanda()"></p-button>
                 </div>
             </div>
